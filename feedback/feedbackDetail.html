@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../plugin/framework7/css/my-app.css">
+
+    <link rel="stylesheet" href="../frame.css">
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+
+                <!-- Top Navbar. In Material theme it should be inside of the page-->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a class="external back" href="myFeedback.html">
+                                <i class="iconfont">&#xe602;</i>
+                            </a>
+                        </div>
+                        <div class="center">反馈详情</div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content feedback-detail">
+                    <div class="detail">
+                        <h5>2016-09-28 16:58:36 <span>已回复</span></h5>
+                        <p>无缘无故别人的账号在我这里登录了，不知道怎么更改账号。</p>
+                    </div>
+
+                    <!--反馈后-->
+                    <div class="sys-reply" style="display: none">请问是否用同一部手机登录过其他微信账号并进入杂草种子页面，如果是，请点击侧边栏底部【清除缓存】后，关闭微信重新登录打开杂草种子页面如果仍未解决，请及时反馈。</div>
+
+                    <!--未反馈时-->
+                    <div class="sys-unplay" >反馈暂未回应</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="../plugin/framework7/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="../plugin/framework7/js/my-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+.navbar{
+    height: 40px;
+    background-image: -moz-linear-gradient( 0deg, rgb(41,216,188) 0%, rgb(12,195,198) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(41,216,188) 0%, rgb(12,195,198) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(41,216,188) 0%, rgb(12,195,198) 100%);
+    box-shadow: 0px 2px 20px 0px rgba(33, 8, 53, 0.4);
+}
+
+a.back{
+    display: inline-block;
+    width:50px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+}
+a.back i.iconfont{
+    font-size: 18px;
+}
+a.del-it{
+    display: inline-block;
+    padding-right: 10px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.page-content{
+    background-color: #ebebeb;
+}
+.message-list .list-block{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    background-color: #fff;
+}
+.message-list .list-block ul li .item-content .item-media .headpic{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    border:1px solid #ededed;
+}
+.message-list .list-block ul li .item-content .item-inner .item-title-row .item-title{
+    font-size: 13px;
+    color: #229ad2;
+}
+.message-list .list-block ul li .item-content .item-inner .item-subtitle{
+    font-size: 14px;
+    color: #808080;
+}
+.message-sent{
+    position: relative;
+    min-height:48px;
+}
+.message-sent .message-avatar{
+    position: absolute;
+    right: 0px;
+    top:0px;
+    margin-top: 0px;
+}
+.message-sent .message-text{
+    margin-right: 56px;
+    border-radius: 8px 0px 8px 8px;
+    background-color: #0cc3c6;
+    color: #fff;
+    min-height: 32px;
+}
+.message-sent .message-text:before{
+    display: none;
+}
+.message-received{
+    position: relative;
+}
+.message-received .message-avatar{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    margin-top: 0px;
+}
+.message-received .message-text{
+    border-radius: 0px 8px 8px 8px;
+    min-height: 32px;
+}
+
+.message-received .message-text:before{
+    display: none;
+}
+.message-text img{
+    max-width: 100px;
+}
+.messages-date span{
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 9px;
+    background-color: #ccc;
+    color: #fff;
+}
+.toolbar.messagebar a.send{
+    background-color: #0cc3c6;
+    color: #fff;
+}
+.toolbar.messagebar a.icon-only i.iconfont{
+    font-size: 24px;
+}

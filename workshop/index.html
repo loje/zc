@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>工厂</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../plugin/framework7/css/my-app.css">
+
+    <link rel="stylesheet" href="../frame.css">
+    <link rel="stylesheet" href="workshop.css">
+</head>
+<body>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+
+                <!-- Top Navbar. In Material theme it should be inside of the page-->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">1/4.选择类型</div>
+                    </div>
+                </div>
+
+                <!-- Bottom Toolbar. In Material theme it should be inside of the page-->
+                <div class="toolbar toolbar-bottom tabbar tabbar-labels">
+                    <div class="toolbar-inner">
+                        <!-- Toolbar links -->
+                        <a href="../index/index.html" class="external tab-link">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe647;</i>
+                                <span class="tabbar-label">星道</span>
+                            </span>
+                        </a>
+                        <a href="#" class="external tab-link active">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe648;</i>
+                                <span class="tabbar-label">工厂</span>
+                            </span>
+                        </a>
+                        <a href="../road/road.html" class="external tab-link">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe649;</i>
+                                <span class="tabbar-label">校道</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="real-name">
+                    <div class="table">
+                        <div class="td">
+                            <div class="pic"></div>
+                            <p>赶快去认证你的大学生身份<br/>打开手帐</p>
+                            <a href="../realname/realname.html" class="external button">现在就去</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="table">
+                        <div class="tr">
+                            <div class="td">
+                                <div class="chioce one-key">
+                                    <div class="chioce-panel">
+                                        <div class="panel-top">
+                                            <div class="panel-text">
+                                                <h3>快速生成</h3>
+                                                <p>懒癌晚期的福音</p>
+                                            </div>
+                                            <div class="panel-pic"></div>
+                                            <div class="panel-bg"></div>
+                                        </div>
+                                        <div class="panel-btm">
+                                            <a href="template.html" class="external button">选择该模板</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tr">
+                            <div class="td">
+                                <div class="chioce user-diy">
+                                    <div class="chioce-panel">
+                                        <div class="panel-top">
+                                            <div class="panel-text">
+                                                <h3>自定义生成</h3>
+                                                <p>完美癌者的福音</p>
+                                            </div>
+                                            <div class="panel-pic"></div>
+                                            <div class="panel-bg"></div>
+                                        </div>
+                                        <div class="panel-btm">
+                                            <a href="template.html" class="external button">选择该模板</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="../plugin/framework7/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="../plugin/framework7/js/my-app.js"></script>
+</body>
+</html>

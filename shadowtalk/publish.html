@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>影子世界</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../plugin/framework7/css/my-app.css">
+
+    <link rel="stylesheet" href="../frame.css">
+    <link rel="stylesheet" href="shadowtalk.css">
+</head>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+
+                <!-- Top Navbar. In Material theme it should be inside of the page-->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a class="external back" href="shadowtalk.html">
+                                <i class="iconfont">&#xe602;</i>
+                            </a>
+                        </div>
+                        <div class="center">发表</div>
+                    </div>
+                </div>
+
+                <div class="toolbar toolbar-bottom shadow-send">
+                    <div class="toolbar-inner">
+                        <a href="#" class="link" disabled="disabled">我要发表</a>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content publish-layer">
+                    <div class="notie">
+                        文字，配图，投票，三种至少填其一
+                    </div>
+                    <div class="publish-textarea">
+                        <div class="word-count">还可以输入<span>140</span>字</div>
+                        <textarea rows="5" maxlength="140" placeholder="输入文字..."></textarea>
+                    </div>
+
+                    <div class="accordion-item accordion-item-expanded upload-pic">
+                        <div class="iconfont">&#xe604;</div>
+                        <div class="accordion-item-toggle">
+                            <div class="title">添加图片</div>
+                        </div>
+                        <div class="accordion-item-content">
+                            <div class="pic" style="background-image: url(img/addpic.png)">
+                                <input type="file" onchange="preview(this)" accept="image/*" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item accordion-item-expanded creat-vote">
+                        <div class="iconfont">&#xe604;</div>
+                        <div class="accordion-item-toggle">
+                            <div class="title">添加投票（2-4个选项，每项最多14个字）</div>
+                        </div>
+                        <div class="accordion-item-content">
+                            <ul>
+                                <li>
+                                    <input type="text" maxlength="14" placeholder="" />
+                                </li>
+                                <li>
+                                    <input type="text" maxlength="14" placeholder="" /> <a href="#" class="link add">添加选项</a>
+                                </li>
+                                <li>
+                                    <input type="text" maxlength="14" placeholder="" /> <a href="#" class="link del">删除选项</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="../plugin/framework7/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="../plugin/framework7/js/my-app.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var lenInput = $('.publish-textarea textarea').val().length;
+        $(".publish-textarea textarea").keyup(function(){
+            lenInput = $(this).val().length;
+            if(lenInput>0 && lenInput<=140){
+                $('.publish-textarea .word-count span').html(140 - lenInput);
+                $('.shadow-send .toolbar-inner a').attr('disabled',false);
+            }else{
+                $('.shadow-send .toolbar-inner a').attr('disabled',true);
+            }
+        });
+    })
+
+    function preview(file)
+    {
+        var prevDiv = document.getElementById('preview');
+        if (file.files && file.files[0])
+        {
+            var reader = new FileReader();
+            reader.onload = function(evt){
+                $(".upload-pic .pic").attr("style","background-image:url(" + evt.target.result + ");");
+            }
+            reader.readAsDataURL(file.files[0]);
+        }
+        else
+        {
+            prevDiv.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>';
+        }
+    }
+</script>
+</body>
+</html>

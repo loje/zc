@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>工厂</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../plugin/framework7/css/my-app.css">
+
+    <link rel="stylesheet" href="../frame.css">
+
+    <link rel="stylesheet" href="realname.css">
+    <style>
+        img {
+            max-height: 100%; /* This rule is very important, please do not ignore this! */
+        }
+    </style>
+</head>
+<body>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+
+                <!-- Top Navbar. In Material theme it should be inside of the page-->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">认证你的大学生身份</div>
+                        <div class="right">
+                            <a class="external link" href="#">
+                                暂时跳过
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="qrcode" style="display: none">
+                    <div class="table">
+                        <div class="td">
+                            <img src="../img/qrcode.jpg"/>
+                            <p>问下神奇的杂草君吧</p>
+                            <button class="close-qrcode">关闭</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="realname-form">
+                        <select class="my-school">
+                            <option value="0">请选择你所在的学校</option>
+                            <option value="0">深圳大学</option>
+                            <option value="0">深圳职业技术学院</option>
+                            <option value="0">深圳信息职业技术学院</option>
+                            <option value="other">其他学校</option>
+                        </select>
+                        <select class="college">
+                            <option>请选择你所在的学院</option>
+                        </select>
+                        <div class="other-school" style="display: none;">
+                            <input type="text" placeholder="请填写你所在的学校" />
+                            <input type="text" placeholder="请填写你所在的学院" />
+                        </div>
+                        <select>
+                            <option>请选择你的年级</option>
+                            <option>2017级</option>
+                            <option>2016级</option>
+                            <option>2015级</option>
+                            <option>2014级</option>
+                        </select>
+                        <input type="text" placeholder="请输入你的学号" />
+
+                        <div class="upload-card">
+                            <div class="pic"></div>
+                            <p>请上传你的校卡/学生证</p>
+                            <input type="file" onchange="preview(this)" accept="image/*" />
+                        </div>
+
+                        <button class="button">提交反馈</button>
+                        <p>
+                            <a href="#" class="external link no-pass">无法通过验证？</a>
+                        </p>
+                        <p>
+                            杂草是个实名校园社区，<br/>
+                            必须认证你的大学生身份通过后才能进入
+                        </p>
+                    </div>
+                    <div class="bg"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="../plugin/framework7/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="../plugin/framework7/js/my-app.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".my-school").change(function () {
+            if($(".my-school").val() == "other"){
+                $(".college").hide();
+                $(".other-school").show();
+            }else{
+                $(".college").show();
+                $(".other-school").hide();
+            }
+        })
+
+        $(".no-pass").click(function () {
+            $(".qrcode").fadeIn(250);
+        })
+        $(".close-qrcode").click(function () {
+            $(".qrcode").fadeOut(250);
+        })
+    })
+    function preview(file)
+    {
+        var prevDiv = document.getElementById('preview');
+        if (file.files && file.files[0])
+        {
+            var reader = new FileReader();
+            reader.onload = function(evt){
+                $(".upload-card .pic").attr("style","background-image:url(" + evt.target.result + ");");
+            }
+            reader.readAsDataURL(file.files[0]);
+        }
+        else
+        {
+            prevDiv.innerHTML = '<div class="pic" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>';
+        }
+    }
+</script>
+</body>
+</html>

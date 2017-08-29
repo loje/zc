@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>工厂</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../plugin/framework7/css/my-app.css">
+
+    <link rel="stylesheet" href="../frame.css">
+
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="workshop.css">
+</head>
+<body>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+
+                <!-- Top Navbar. In Material theme it should be inside of the page-->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">3/4.上传图片</div>
+                        <div class="right">
+                            <a class="external link making" href="#">
+                                合并生成
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-bg" style="display: none;">
+                    <div class="table">
+                        <div class="td">
+                            <div class="pic" style="background-image: url(../img/pre.jpg)"></div>
+                            <i class="iconfont">&#xe663;</i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="swiper-container swiper-piclist">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <!--未上传-->
+                                <a href="upload.html" class="external link slide-pic" style="display: none;">
+                                    <div class="table">
+                                        <div class="td">
+                                            <i class="iconfont">&#xe643;</i>
+                                            <p>叙事类</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!--已上传-->
+                                <div class="edit-pic">
+                                    <div class="table" style="background-image: url(https://sqimg.qq.com/qq_product_operations/im/2015/bg1_1600.jpg)">
+                                        <div class="td">
+                                            <a href="#" class="external button">更换图片</a>
+                                            <a href="#" class="external button">编辑图片</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="upload.html" class="external link slide-pic">
+                                    <div class="table">
+                                        <div class="td">
+                                            <i class="iconfont">&#xe643;</i>
+                                            <p>叙事类</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="upload.html" class="external link slide-pic">
+                                    <div class="table">
+                                        <div class="td">
+                                            <i class="iconfont">&#xe643;</i>
+                                            <p>叙事类</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="upload.html" class="external link slide-pic">
+                                    <div class="table">
+                                        <div class="td">
+                                            <i class="iconfont">&#xe643;</i>
+                                            <p>叙事类</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 如果需要分页器 -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- 如果需要导航按钮 -->
+                        <div class="prev">
+                            <div class="swiper-btm btm-prev"></div>
+                        </div>
+                        <div class="next">
+                            <div class="swiper-btm btm-next"></div>
+                        </div>
+                    </div>
+
+                    <div class="preview">
+                        <a href="#" class="external button">预览效果</a>
+                    </div>
+
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="../plugin/framework7/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="../plugin/framework7/js/my-app.js"></script>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction : 'vertical',
+        effect : 'cube',
+
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+
+        // 如果需要前进后退按钮
+        nextButton: '.btm-next',
+        prevButton: '.btm-prev',
+
+    })
+    $(document).ready(function () {
+        $(".preview .button").click(function(){
+            $(".preview-bg").fadeIn(250);
+        })
+
+        $(".preview-bg .table .td i.iconfont").click(function(){
+            $(".preview-bg").fadeOut(250);
+        })
+    })
+</script>
+</body>
+</html>

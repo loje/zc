@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../plugin/framework7/css/my-app.css">
+
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../frame.css">
+    <link rel="stylesheet" href="elf.css">
+</head>
+<body>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+
+                <!-- Top Navbar. In Material theme it should be inside of the page-->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">星道</div>
+                        <div class="right">
+                            <a class="external link ripple letter"  href="../letter/letter.html">
+                                <span class="new"></span>
+                                <i class="iconfont">&#xe607;</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Toolbar. In Material theme it should be inside of the page-->
+                <div class="toolbar toolbar-bottom tabbar tabbar-labels">
+                    <div class="toolbar-inner">
+                        <!-- Toolbar links -->
+                        <a href="#" class="external ripple tab-link active">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe647;</i>
+                                <span class="tabbar-label">星道</span>
+                            </span>
+                        </a>
+                        <a href="#" class="external ripple tab-link">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe648;</i>
+                                <span class="tabbar-label">工厂</span>
+                            </span>
+                        </a>
+                        <a href="../road/road.html" class="external ripple tab-link">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe649;</i>
+                                <span class="tabbar-label">校道</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="real-name" style="display: none;">
+                    <div class="table">
+                        <div class="td">
+                            <div class="pic"></div>
+                            <p>赶快去认证你的大学生身份<br/>打开手帐</p>
+                            <a href="../realname/realname.html" class="external button">现在就去</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-container swiper-guide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="table">
+                                <div class="td">
+                                    <div class="guide-card">
+                                        <div class="guide-pic" style="background-image: url(../img/guide1.png)"></div>
+                                        <div class="t" style="background-image: url(../img/guide1t.png)"></div>
+                                        <p>杂草是一个大学生实名认证社区，为了保证你可以在这里放飞自己随性而为，所有用户都需要通过严格认证确认为大学生才能进行内容发布。</p>
+                                        <div class="pg" style="background-image: url(../img/p1.png)"></div>
+                                        <div class="next-btn">
+                                            <button class="btn1">继续</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="table">
+                                <div class="td">
+                                    <div class="guide-card">
+                                        <div class="guide-pic" style="background-image: url(../img/guide2.png)"></div>
+                                        <div class="t" style="background-image: url(../img/guide2t.png)"></div>
+                                        <p>专门为你打造的数百款特效画面和文字泡泡，各种组合随意创作，把你的小情绪小时光再度渲染完美呈现。</p>
+                                        <div class="pg" style="background-image: url(../img/p2.png)"></div>
+                                        <div class="next-btn">
+                                            <button class="btn2">继续</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="table">
+                                <div class="td">
+                                    <div class="guide-card">
+                                        <div class="guide-pic" style="background-image: url(../img/guide3.png)"></div>
+                                        <div class="t" style="background-image: url(../img/guide3t.png)"></div>
+                                        <p>海量贴纸库，专属大学校园的精致风格，让二次元和三次元完美结合，讲述你独一无二的校园故事。</p>
+                                        <div class="pg" style="background-image: url(../img/p3.png)"></div>
+                                        <div class="next-btn">
+                                            <button class="btn3">继续</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="table">
+                                <div class="td">
+                                    <div class="guide-card">
+                                        <div class="guide-pic" style="background-image: url(../img/guide4.png)"></div>
+                                        <div class="t" style="background-image: url(../img/guide4t.png)"></div>
+                                        <p>自由拖放伸缩，一键滤镜改图，你的每一段故事都应该有自由定制的舞台，是暖心故事还是英雄传说，你的校园诗篇，就从这里开始。</p>
+                                        <div class="pg" style="background-image: url(../img/p4.png)"></div>
+                                        <div class="next-btn">
+                                            <button class="btn4">我要来一发</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="msg-box">
+                        <a href="../letter/letter.html" class="link ripple external">你有一条新消息</a>
+                    </div>
+                    <div class="pet" style="background-image: url(img/pet.png)"></div>
+                    <!-- Link to another page -->
+                    <!--<a href="../about.html">About app</a>-->
+                    <div class="bg" style=""></div>
+
+                    <div class="user-bar">
+                        <div class="table">
+                            <div class="td">
+                                <a class="link external" href="../info/info.html">
+                                    <i class="iconfont">&#xe64b;</i>
+                                    <p>个人主页</p>
+                                </a>
+                            </div>
+                            <div class="td">
+                                <a class="link external" href="../cp/cp.html">
+                                    <i class="iconfont">&#xe64d;</i>
+                                    <p>CP圈</p>
+                                </a>
+                            </div>
+                            <div class="td">
+                                <a href="" class="link external">
+                                    <i class="iconfont">&#xe64e;</i>
+                                    <p>种子系统</p>
+                                </a>
+                            </div>
+                            <div class="td">
+                                <a href="" class="link external">
+                                    <i class="iconfont">&#xe64f;</i>
+                                    <p>黑店</p>
+                                </a>
+                            </div>
+                            <canvas id="canvasbg"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="../plugin/framework7/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="../plugin/framework7/js/my-app.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+<script src="elf.js"></script>
+<script>
+    $(document).ready(function(){
+        var mySwiper = new Swiper ('.swiper-guide', {
+            loop: false,
+            noSwiping : true,
+        })
+
+        $(".btn1").click(function(){
+            mySwiper.slideNext();
+        })
+        $(".btn2").click(function(){
+            mySwiper.slideNext();
+        })
+        $(".btn3").click(function(){
+            mySwiper.slideNext();
+        })
+        $(".btn4").click(function(){
+            $(".swiper-guide").fadeOut(250);
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../plugin/framework7/css/my-app.css">
+
+    <link rel="stylesheet" href="../frame.css">
+    <link rel="stylesheet" href="cp.css">
+</head>
+<body>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+
+                <!-- Top Navbar. In Material theme it should be inside of the page-->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a class="external back" href="../index/index.html">
+                                <i class="iconfont">&#xe602;</i>
+                            </a>
+                        </div>
+                        <div class="center">CP圈</div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <!--<canvas id="canvas">-->
+                        <!--您的浏览器不支持canvas标签-->
+                    <!--</canvas>-->
+                    <div class="orbital">
+                        <div class="table">
+                            <div class="td">
+                                <div class="out">
+                                    <div class="in"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="friends">
+                        <a href="#" class="external user-pic" style="background-image: url()"></a>
+                        <a href="#" class="external friend-pic" style="background-image: url()"></a>
+                        <a href="#" class="external friend-pic" style="background-image: url()"></a>
+                        <a href="#" class="external friend-pic" style="background-image: url()"></a>
+                        <a href="#" class="external friend-pic" style="background-image: url()"></a>
+                        <a href="#" class="external friend-pic" style="background-image: url()"></a>
+                        <a href="#" class="external friend-pic" style="background-image: url()"></a>
+                        <a href="#" class="external friend-pic" style="background-image: url()"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="../plugin/framework7/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="../plugin/framework7/js/my-app.js"></script>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="cp.js"></script>
+
+</body>
+</html>

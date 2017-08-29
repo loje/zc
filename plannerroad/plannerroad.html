@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>校道</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../plugin/framework7/css/my-app.css">
+
+    <link rel="stylesheet" href="../frame.css">
+    <link rel="stylesheet" href="plannerroad.css">
+</head>
+<body>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">
+                            <!-- Buttons row as tabs controller in navbar-->
+                            <div class="buttons-row">
+                                <!-- Link to 1st tab, active -->
+                                <a href="../road/road.html" class="external tab-link button">推荐</a>
+                                <!-- Link to 2nd tab -->
+                                <a href="#" class="external tab-link button active">手账</a>
+                                <!-- Link to 3rd tab -->
+                                <a href="../topicroad/topicroad.html" class="external tab-link button">话题</a>
+                                <a href="../shadowtalk/shadowtalk.html" class="external tab-link button">
+                                    <i class="iconfont">&#xe654;</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poptip">
+                    <div class="poptip-angle on-top"></div>
+                    <div class="poptip-inner">
+                        影子世界即将开启
+                    </div>
+                </div>
+
+                <!-- Bottom Toolbar. In Material theme it should be inside of the page-->
+                <div class="toolbar toolbar-bottom tabbar tabbar-labels">
+                    <div class="toolbar-inner">
+                        <!-- Toolbar links -->
+                        <a href="../index/index.html" class="external tab-link">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe647;</i>
+                                <span class="tabbar-label">星道</span>
+                            </span>
+                        </a>
+                        <a href="#" class="external tab-link">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe648;</i>
+                                <span class="tabbar-label">工厂</span>
+                            </span>
+                        </a>
+                        <a href="#" class="external tab-link active">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe649;</i>
+                                <span class="tabbar-label">校道</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="navbar-banner">
+                        <div class="pic" style="background-image: url()"></div>
+                    </div>
+
+                    <div class="road-card-list" style="display: none">
+                        <!--手账-->
+                        <div class="road-card">
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="head" style="background-image: url()"></div>
+                                </div>
+                                <div class="media-body">
+                                    <div class="name">
+                                        Andrea
+                                    </div>
+                                    <div class="time">
+                                        06月12日 13:14
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="digest">我们宿舍四美~很高兴能认识你们，未来的四年请多多指教拉~<a href="#">#我的室友#</a></div>
+                            <a href="../planner/detail.html" class="external thumbnail">
+                                <div class="pic" style="background-image: url()"></div>
+                                <p>
+                                    <i class="iconfont">&#xe655;</i> 查看
+                                </p>
+                            </a>
+                            <div class="road-card-footer">
+                                <div class="card-footer-link">
+                                    <a href="#" class="link like-btn">
+                                        <i class="iconfont">&#xe61b;</i>
+                                        <span>1591</span>
+                                    </a>
+                                </div>
+                                <div class="card-footer-link">
+                                    <a href="#" class="link comment-btn">
+                                        <i class="iconfont">&#xe656;</i>
+                                        <span>2578</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="road-card">
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="head" style="background-image: url()"></div>
+                                </div>
+                                <div class="media-body">
+                                    <div class="name">
+                                        Andrea
+                                    </div>
+                                    <div class="time">
+                                        06月12日 13:14
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="digest">我们宿舍四美~很高兴能认识你们，未来的四年请多多指教拉~<a href="#">#我的室友#</a></div>
+                            <a href="../planner/detail.html" class="external thumbnail">
+                                <div class="pic" style="background-image: url()"></div>
+                                <p>
+                                    <i class="iconfont">&#xe655;</i> 查看
+                                </p>
+                            </a>
+                            <div class="road-card-footer">
+                                <div class="card-footer-link">
+                                    <a href="#" class="link like-btn">
+                                        <i class="iconfont">&#xe61b;</i>
+                                        <span>1591</span>
+                                    </a>
+                                </div>
+                                <div class="card-footer-link">
+                                    <a href="#" class="link comment-btn">
+                                        <i class="iconfont">&#xe656;</i>
+                                        <span>2578</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="solongplanner">
+                        <div class="table">
+                            <div class="td">
+                                <div class="no-planner"></div>
+                                <h4>你已经7天没有发内容啦，还不赶紧来一发</h4>
+                                <p>杂草是基于用户间内容分享的校园社区</p>
+                                <a href="#" class="external button">来一发</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Floating Action Button -->
+                <a href="#" class="floating-button">
+                    <i class="iconfont">&#xe65b;</i>
+                </a>
+
+                <div class="modal-school" style="display: none;">
+                    <div class="table">
+                        <div class="td">
+                            <div class="modal-content">
+                                <div class="title">
+                                    请选择学校圈子
+                                </div>
+                                <div class="content">
+                                    <div class="list-block">
+                                        <ul>
+                                            <!-- Single radio input -->
+                                            <li>
+                                                <label class="label-radio item-content">
+                                                    <!-- Checked by default -->
+                                                    <input type="radio" name="school-radio" value="all" checked="checked">
+                                                    <div class="item-media">
+                                                        <i class="iconfont">&#xe65b;</i> 全部学校
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <i class="icon icon-form-radio"></i>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <!-- Another radio input -->
+                                            <li>
+                                                <label class="label-radio item-content">
+                                                    <input type="radio" name="school-radio" value="szu">
+                                                    <div class="item-media">
+                                                        <span class="school-logo" style="background-image: url(img/szu.png)"></span> 深圳大学
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <i class="icon icon-form-radio"></i>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="label-radio item-content">
+                                                    <input type="radio" name="school-radio" value="szpt">
+                                                    <div class="item-media">
+                                                        <span class="school-logo" style="background-image: url(img/szpt.png)"></span> 深圳职业技术学院
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <i class="icon icon-form-radio"></i>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="label-radio item-content">
+                                                    <input type="radio" name="school-radio" value="sziit">
+                                                    <div class="item-media">
+                                                        <span class="school-logo" style="background-image: url(img/sziit.png)"></span> 深圳大学
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <i class="icon icon-form-radio"></i>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-bg"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="../plugin/framework7/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="../plugin/framework7/js/my-app.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".floating-button").click(function () {
+            $(".modal-school").fadeIn(250);
+        })
+
+        $(".modal-school .modal-bg").click(function () {
+            $(".modal-school").fadeOut(250);
+        })
+    })
+</script>
+</body>
+</html>

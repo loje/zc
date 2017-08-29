@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>工厂</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="../plugin/framework7/css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../plugin/framework7/css/my-app.css">
+
+    <link rel="stylesheet" href="../frame.css">
+
+    <link rel="stylesheet" href="workshop.css">
+    <style>
+        img {
+            max-width: 100%; /* This rule is very important, please do not ignore this! */
+        }
+    </style>
+</head>
+<body>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+
+                <!-- Top Navbar. In Material theme it should be inside of the page-->
+                <div class="navbar navbar-upload">
+                    <div class="navbar-inner">
+                        <div class="center">编辑图片</div>
+                        <div class="right">
+                            <a class="external link" href="#">
+                                保存并继续
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toolbar toolbar-bottom toolbar-modified">
+                    <div class="toolbar-inner">
+                        <a href="#tab1" class="tab-link active">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe65e;</i>
+                                <p>情绪</p>
+                            </span>
+                        </a>
+                        <a href="#tab2" class="tab-link">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe65f;</i>
+                                <p>效果线</p>
+                            </span>
+                        </a>
+                        <a href="#tab3" class="tab-link">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe660;</i>
+                                <p>贴图</p>
+                            </span>
+                        </a>
+                        <a href="#tab4" class="tab-link">
+                            <span class="tab-btn">
+                                <i class="iconfont">&#xe661;</i>
+                                <p>台词</p>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Scrollable page content -->
+                <div class="page-content" style="overflow: hidden;">
+                    <div class="modified-layer">
+                        <a href="#" class="external link undo">
+                            <i class="iconfont">&#xe662;</i>
+                        </a>
+                        <div class="table">
+                            <div class="td">
+                                <img src="../img/1001.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabs-animated-wrap sub-bar">
+                    <!-- Tabs, now tabs wrapper is "views" -->
+                    <div class="tabs toolbar-fixed">
+                        <!-- Tab 1 - View 1, active by default -->
+                        <div id="tab1" class="tab active">
+                            <a href="#" class="external link take-go">
+                                <div class="img" style="background-image: url()"></div>
+                                <p>泛黄记忆1</p>
+                            </a>
+                            <a href="#" class="external link take-go">
+                                <div class="img" style="background-image: url()"></div>
+                                <p>泛黄记忆1</p>
+                            </a>
+                            <a href="#" class="external link take-go">
+                                <div class="img" style="background-image: url()"></div>
+                                <p>泛黄记忆1</p>
+                            </a>
+                            <a href="#" class="external link take-go">
+                                <div class="img" style="background-image: url()"></div>
+                                <p>泛黄记忆1</p>
+                            </a>
+                            <a href="#" class="external link take-go">
+                                <div class="img" style="background-image: url()"></div>
+                                <p>泛黄记忆1</p>
+                            </a>
+                            <a href="#" class="external link take-go">
+                                <div class="img" style="background-image: url()"></div>
+                                <p>泛黄记忆1</p>
+                            </a>
+                            <a href="#" class="external link take-go">
+                                <div class="img" style="background-image: url()"></div>
+                                <p>泛黄记忆1</p>
+                            </a>
+                            <a href="#" class="external link take-go">
+                                <div class="img" style="background-image: url()"></div>
+                                <p>泛黄记忆1</p>
+                            </a>
+                        </div>
+                        <!-- Tab 2 - View 2 -->
+                        <div id="tab2" class="tab">
+                            <a href="#" class="external link take-go">
+                                <div class="img" style="background-image: url()"></div>
+                                <p>泛黄记忆2</p>
+                            </a>
+                        </div>
+                        <!-- Tab 2 - View 3 -->
+                        <div id="tab3" class="tab">
+                            <a href="#" class="external link take-go">
+                                <div class="img" style="background-image: url()"></div>
+                                <p>泛黄记忆3</p>
+                            </a>
+                        </div>
+                        <!-- Tab 2 - View 3 -->
+                        <div id="tab4" class="tab">
+                            <a href="#" class="external link take-go">
+                                <div class="img" style="background-image: url()"></div>
+                                <p>泛黄记忆4</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="../plugin/framework7/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="../plugin/framework7/js/my-app.js"></script>
+
+<script type="text/javascript" src="../plugin/alloyimage/alloyimage.js"></script>
+<script>
+    var img = new Image();
+    img.src = "../img/1001.png";
+    img.onload = function(){
+        //素描效果
+        AlloyImage(this).act("灰度处理").add(//添加一个图层上去
+            AlloyImage(this).act("灰度处理").act("反色").act("高斯模糊",5) , "颜色减淡"
+        ).act("锐化").show();
+    };
+</script>
+</body>
+</html>
